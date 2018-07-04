@@ -1,0 +1,8 @@
+file = "dec.txt"
+i = {}
+for filenames in filename:
+
+ f = open(filename)
+ i[filename] = f.read()
+ f.close()
+
