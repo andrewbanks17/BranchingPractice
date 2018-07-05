@@ -1,8 +1,15 @@
 file = "dec.txt"
 i = {}
-for filenames in filename:
+for filenames in file:
 
- f = open(filename)
- i[filename] = f.read()
+ f = open(file)
+ i[file] = f.read()
  f.close()
+
+def mapper(input_key, input_value):
+ return [(word,1) for word in remove_punctuation(input_value.lower()).split()]
+
+def remove_punctuation(s):
+ return s.translate(string.maketrans("",""), string.punctuation)
+
 
